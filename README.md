@@ -1,5 +1,7 @@
 # STB Réclamations — Plateforme de gestion des réclamations clients
 
+[![CI](https://github.com/oujimalek/stb-reclamations/actions/workflows/ci.yml/badge.svg)](https://github.com/oujimalek/stb-reclamations/actions/workflows/ci.yml)
+
 Workflow automatisé de traitement des réclamations et classification des tickets par NLP.
 Projet de stage ingénieur — STB BANK, Direction Technique (juillet – septembre 2026).
 
@@ -55,7 +57,26 @@ TF-IDF (mots 1-2 grammes + caractères 3-5 grammes) et comparaison Naive Bayes /
 Les métriques sont dans `nlp-service/models/metriques.json`. Le corpus est synthétique et anonyme (les réclamations réelles étant couvertes par le secret bancaire) ;
 un second jeu rédigé à la main (`data/test_manuel.csv`) mesure la généralisation.
 
-## Tests
+## Lancer avec Docker
 ```bash
-cd backend && mvn test
+docker compose up --build
 ```
+Front-end : http://localhost:4200 · API : http://localhost:8080 · NLP : http://localhost:8000/docs
+
+## Qualité et tests
+
+| Composant | Outils | Contenu |
+|---|---|---|
+| Back-end | JUnit 5, Mockito, MockMvc, JaCoCo | Tests unitaires (workflow, dépôt et classification, affectation, JWT) et tests d'intégration de l'API (401, 403, 409, parcours complet) |
+| Service NLP | pytest, TestClient | Prétraitement, API `/classify`, validation, garde-fous de non-régression sur les métriques du modèle |
+| API | Postman | `docs/STB-Reclamations.postman_collection.json` : 10 requêtes avec assertions, à lancer dans le Runner |
+| Intégration continue | GitHub Actions | À chaque push : `mvn verify` + couverture, `pytest`, build de production Angular |
+
+```bash
+cd backend && mvn verify              # tests + rapport de couverture (target/site/jacoco/index.html)
+cd nlp-service && pip install -r requirements-dev.txt && pytest -v
+```
+
+## Méthode de travail
+- Branche `main` protégée par la CI ; commits suivant la convention *Conventional Commits* (`feat`, `fix`, `test`, `ci`, `docs`).
+- Itérations hebdomadaires avec démonstration à l'encadrant (voir le planning dans le rapport).
