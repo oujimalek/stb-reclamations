@@ -1,0 +1,33 @@
+texte,categorie
+"Le GAB de l'avenue Habib Bourguiba a gardé ma carte hier soir, je ne peux plus retirer d'argent",CARTE_BANCAIRE
+"j'ai payé sur un site marchand et le montant est passé deux fois sur ma carte",CARTE_BANCAIRE
+"Paiement refusé à l'étranger avec ma Visa alors que j'ai activé l'option internationale",CARTE_BANCAIRE
+"On m'a promis la nouvelle carte il y a un mois et toujours rien",CARTE_BANCAIRE
+"Mon employeur a fait le transfert du salaire le 25 et je n'ai toujours rien reçu",VIREMENT
+"L'argent envoyé à ma soeur en France n'est pas arrivé depuis une semaine",VIREMENT
+"Le transfert vers le compte de mon fournisseur a été rejeté sans explication",VIREMENT
+"Le versement automatique mensuel vers mon épargne ne s'est pas fait",VIREMENT
+"Mon dossier de prêt voiture est bloqué depuis 2 mois",CREDIT
+"La mensualité du prêt logement a été retirée deux fois",CREDIT
+"On m'applique un taux de 11% alors que le conseiller avait dit 9%",CREDIT
+"J'ai remboursé mon emprunt en avance mais les échéances continuent",CREDIT
+"Je n'ai plus accès à mon argent, compte gelé sans prévenir",COMPTE
+"Il y a une opération de 400 dinars inconnue sur mon relevé",COMPTE
+"Ça fait 3 semaines que j'attends l'ouverture du compte de mon fils",COMPTE
+"Je veux fermer mon compte et l'agence refuse",COMPTE
+"Pourquoi on me prend 15 dinars chaque mois sans m'avoir informé",FRAIS_COMMISSIONS
+"Les agios facturés sont énormes alors que je n'étais pas en négatif",FRAIS_COMMISSIONS
+"Commission prélevée pour un service SMS que je n'ai pas demandé",FRAIS_COMMISSIONS
+"Les frais ne respectent pas les tarifs affichés en agence",FRAIS_COMMISSIONS
+"Impossible de me connecter à l'appli depuis hier, message d'erreur",BANQUE_DIGITALE
+"Je ne reçois pas le code de validation par SMS pour valider mes opérations en ligne",BANQUE_DIGITALE
+"Le site internet de la banque plante quand je consulte mes relevés",BANQUE_DIGITALE
+"Mon accès internet banking est suspendu après des essais de mot de passe",BANQUE_DIGITALE
+"J'ai déposé un chèque il y a 10 jours et le montant n'apparait pas",CHEQUE
+"Le carnet de chèques commandé n'est jamais arrivé à l'agence",CHEQUE
+"Mon chèque a été retourné impayé alors que j'avais la provision",CHEQUE
+"Le chèque que j'ai remis a été perdu",CHEQUE
+"Personne ne décroche au numéro du service client",ACCUEIL_AGENCE
+"Le guichetier a été très impoli avec ma mère",ACCUEIL_AGENCE
+"J'ai attendu toute la matinée à l'agence de Sfax pour rien",ACCUEIL_AGENCE
+"Chaque conseiller me dit une chose différente sur mon dossier",ACCUEIL_AGENCE

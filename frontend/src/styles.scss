@@ -1,0 +1,31 @@
+:root {
+  --bleu: #0b3d7a; --bleu-clair: #e8f0fa; --vert: #0f8a5f; --orange: #d97706; --rouge: #c0392b;
+  --gris: #6b7280; --bord: #e5e7eb; --fond: #f5f7fb; --texte: #1f2937;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; background: var(--fond); color: var(--texte); font-size: 14px; }
+h1 { font-size: 22px; margin: 0 0 4px; } h2 { font-size: 16px; margin: 0 0 12px; }
+.sous-titre { color: var(--gris); margin: 0 0 20px; }
+.carte { background: #fff; border: 1px solid var(--bord); border-radius: 10px; padding: 18px; }
+.grille { display: grid; gap: 16px; }
+.btn { border: 0; border-radius: 8px; padding: 9px 16px; font-weight: 600; cursor: pointer; background: var(--bleu); color: #fff; font-size: 14px; }
+.btn.secondaire { background: #fff; color: var(--bleu); border: 1px solid var(--bleu); }
+.btn.vert { background: var(--vert); } .btn.rouge { background: var(--rouge); }
+.btn:disabled { opacity: .5; cursor: default; }
+input, select, textarea { width: 100%; border: 1px solid #cfd6e0; border-radius: 8px; padding: 9px 11px; font: inherit; background: #fff; }
+textarea { resize: vertical; min-height: 110px; }
+label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 13px; }
+.champ { margin-bottom: 14px; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-size: 12px; text-transform: uppercase; color: var(--gris); padding: 10px; border-bottom: 1px solid var(--bord); }
+td { padding: 11px 10px; border-bottom: 1px solid var(--bord); vertical-align: middle; }
+tr.cliquable:hover { background: var(--bleu-clair); cursor: pointer; }
+.badge { display: inline-block; padding: 3px 9px; border-radius: 999px; font-size: 12px; font-weight: 600; background: #eef2f7; color: #374151; white-space: nowrap; }
+.badge.NOUVELLE { background: #e0e7ff; color: #3730a3; } .badge.QUALIFIEE { background: #e0f2fe; color: #075985; }
+.badge.AFFECTEE { background: #ede9fe; color: #5b21b6; } .badge.EN_COURS { background: #fef3c7; color: #92400e; }
+.badge.EN_ATTENTE_CLIENT { background: #f3f4f6; color: #374151; } .badge.ESCALADEE { background: #fee2e2; color: #991b1b; }
+.badge.RESOLUE { background: #d1fae5; color: #065f46; } .badge.CLOTUREE { background: #e5e7eb; color: #111827; }
+.badge.REJETEE { background: #fecaca; color: #7f1d1d; }
+.badge.HAUTE { background: #fee2e2; color: #b91c1c; } .badge.MOYENNE { background: #ffedd5; color: #9a3412; } .badge.BASSE { background: #dcfce7; color: #166534; }
+.erreur { color: var(--rouge); margin-top: 8px; }
+.retard { color: var(--rouge); font-weight: 600; }

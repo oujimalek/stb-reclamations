@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: stb-reclamations
+  datasource:
+    url: jdbc:h2:mem:reclamations;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: true
+  mail:
+    host: localhost
+    port: 1025
+
+app:
+  jwt:
+    # clé HMAC-SHA256 encodée en Base64 (à remplacer en production via variable d'environnement)
+    secret: ${JWT_SECRET:c3RiLXJlY2xhbWF0aW9ucy1jbGUtc2VjcmV0ZS1kZS1kZXZlbG9wcGVtZW50LTIwMjY=}
+    expiration-minutes: 480
+  nlp:
+    url: ${NLP_URL:http://localhost:8000}
+    seuil-confiance: 0.45
+  sla-heures:
+    HAUTE: 24
+    MOYENNE: 72
+    BASSE: 120
+  cors:
+    origins: http://localhost:4200
+  notifications:
+    email-actif: false
+
+---
+spring:
+  config:
+    activate:
+      on-profile: postgres
+  datasource:
+    url: jdbc:postgresql://localhost:5432/stb_reclamations
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}

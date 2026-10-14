@@ -1,0 +1,5 @@
+package tn.stb.reclamations.model;
+
+public enum Categorie {
+    CARTE_BANCAIRE, VIREMENT, CREDIT, COMPTE, FRAIS_COMMISSIONS, BANQUE_DIGITALE, CHEQUE, ACCUEIL_AGENCE, AUTRE
+}

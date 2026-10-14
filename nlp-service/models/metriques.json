@@ -1,0 +1,302 @@
+{
+  "categorie": {
+    "comparaison": {
+      "Naive Bayes (Complement)": {
+        "accuracy": 0.9403,
+        "f1_macro": 0.9404
+      },
+      "Régression logistique": {
+        "accuracy": 0.9403,
+        "f1_macro": 0.9404
+      },
+      "SVM linéaire": {
+        "accuracy": 0.9403,
+        "f1_macro": 0.9404
+      }
+    },
+    "meilleur": "Naive Bayes (Complement)",
+    "labels": [
+      "ACCUEIL_AGENCE",
+      "BANQUE_DIGITALE",
+      "CARTE_BANCAIRE",
+      "CHEQUE",
+      "COMPTE",
+      "CREDIT",
+      "FRAIS_COMMISSIONS",
+      "VIREMENT"
+    ],
+    "rapport": {
+      "ACCUEIL_AGENCE": {
+        "precision": 0.9545454545454546,
+        "recall": 0.9767441860465116,
+        "f1-score": 0.9655172413793104,
+        "support": 43.0
+      },
+      "BANQUE_DIGITALE": {
+        "precision": 0.9534883720930233,
+        "recall": 0.9318181818181818,
+        "f1-score": 0.9425287356321839,
+        "support": 44.0
+      },
+      "CARTE_BANCAIRE": {
+        "precision": 0.9512195121951219,
+        "recall": 0.8863636363636364,
+        "f1-score": 0.9176470588235294,
+        "support": 44.0
+      },
+      "CHEQUE": {
+        "precision": 0.9534883720930233,
+        "recall": 0.9111111111111111,
+        "f1-score": 0.9318181818181818,
+        "support": 45.0
+      },
+      "COMPTE": {
+        "precision": 0.8936170212765957,
+        "recall": 0.9545454545454546,
+        "f1-score": 0.9230769230769231,
+        "support": 44.0
+      },
+      "CREDIT": {
+        "precision": 0.9555555555555556,
+        "recall": 0.9772727272727273,
+        "f1-score": 0.9662921348314607,
+        "support": 44.0
+      },
+      "FRAIS_COMMISSIONS": {
+        "precision": 0.9767441860465116,
+        "recall": 0.9545454545454546,
+        "f1-score": 0.9655172413793104,
+        "support": 44.0
+      },
+      "VIREMENT": {
+        "precision": 0.8913043478260869,
+        "recall": 0.9318181818181818,
+        "f1-score": 0.9111111111111111,
+        "support": 44.0
+      },
+      "accuracy": 0.9403409090909091,
+      "macro avg": {
+        "precision": 0.9412453527039215,
+        "recall": 0.9405273666901574,
+        "f1-score": 0.9404385785065014,
+        "support": 352.0
+      },
+      "weighted avg": {
+        "precision": 0.9412423496287726,
+        "recall": 0.9403409090909091,
+        "f1-score": 0.9403428425418391,
+        "support": 352.0
+      }
+    },
+    "matrice_confusion": [
+      [
+        42,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        41,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        39,
+        2,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        0,
+        41,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        42,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        43,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        42,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        41
+      ]
+    ],
+    "n_train": 1408,
+    "n_test": 352,
+    "test_manuel": {
+      "n": 32,
+      "accuracy": 0.7188,
+      "f1_macro": 0.7135,
+      "erreurs": [
+        {
+          "texte": "j'ai payé sur un site marchand et le montant est passé deux fois sur ma carte",
+          "attendu": "CARTE_BANCAIRE",
+          "predit": "BANQUE_DIGITALE"
+        },
+        {
+          "texte": "Paiement refusé à l'étranger avec ma Visa alors que j'ai activé l'option internationale",
+          "attendu": "CARTE_BANCAIRE",
+          "predit": "VIREMENT"
+        },
+        {
+          "texte": "Le versement automatique mensuel vers mon épargne ne s'est pas fait",
+          "attendu": "VIREMENT",
+          "predit": "COMPTE"
+        },
+        {
+          "texte": "On m'applique un taux de 11% alors que le conseiller avait dit 9%",
+          "attendu": "CREDIT",
+          "predit": "ACCUEIL_AGENCE"
+        },
+        {
+          "texte": "Je n'ai plus accès à mon argent, compte gelé sans prévenir",
+          "attendu": "COMPTE",
+          "predit": "BANQUE_DIGITALE"
+        },
+        {
+          "texte": "Ça fait 3 semaines que j'attends l'ouverture du compte de mon fils",
+          "attendu": "COMPTE",
+          "predit": "ACCUEIL_AGENCE"
+        },
+        {
+          "texte": "Je veux fermer mon compte et l'agence refuse",
+          "attendu": "COMPTE",
+          "predit": "ACCUEIL_AGENCE"
+        },
+        {
+          "texte": "Le carnet de chèques commandé n'est jamais arrivé à l'agence",
+          "attendu": "CHEQUE",
+          "predit": "VIREMENT"
+        },
+        {
+          "texte": "Le guichetier a été très impoli avec ma mère",
+          "attendu": "ACCUEIL_AGENCE",
+          "predit": "BANQUE_DIGITALE"
+        }
+      ]
+    }
+  },
+  "priorite": {
+    "comparaison": {
+      "Naive Bayes (Complement)": {
+        "accuracy": 0.821,
+        "f1_macro": 0.5696
+      },
+      "Régression logistique": {
+        "accuracy": 0.9688,
+        "f1_macro": 0.9397
+      },
+      "SVM linéaire": {
+        "accuracy": 0.9517,
+        "f1_macro": 0.881
+      }
+    },
+    "meilleur": "Régression logistique",
+    "labels": [
+      "BASSE",
+      "HAUTE",
+      "MOYENNE"
+    ],
+    "rapport": {
+      "BASSE": {
+        "precision": 1.0,
+        "recall": 0.978021978021978,
+        "f1-score": 0.9888888888888889,
+        "support": 182.0
+      },
+      "HAUTE": {
+        "precision": 0.92,
+        "recall": 0.8214285714285714,
+        "f1-score": 0.8679245283018868,
+        "support": 28.0
+      },
+      "MOYENNE": {
+        "precision": 0.9395973154362416,
+        "recall": 0.9859154929577465,
+        "f1-score": 0.9621993127147767,
+        "support": 142.0
+      },
+      "accuracy": 0.96875,
+      "macro avg": {
+        "precision": 0.9531991051454138,
+        "recall": 0.9284553474694319,
+        "f1-score": 0.9396709099685174,
+        "support": 352.0
+      },
+      "weighted avg": {
+        "precision": 0.9692693715680292,
+        "recall": 0.96875,
+        "f1-score": 0.968499906181048,
+        "support": 352.0
+      }
+    },
+    "matrice_confusion": [
+      [
+        178,
+        0,
+        4
+      ],
+      [
+        0,
+        23,
+        5
+      ],
+      [
+        0,
+        2,
+        140
+      ]
+    ],
+    "n_train": 1408,
+    "n_test": 352
+  }
+}
